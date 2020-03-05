@@ -117,9 +117,10 @@
             &__img {
                 height: 62px;
             }
-            &__title {
+            &__title a{
                 margin-top: 20px;
                 font-size: 18px;
+                color: $text;
                 @include f700;
                 margin-bottom: 35px;
             }
@@ -173,5 +174,204 @@
     @include f700;
 }
 
-
 /* end project */
+
+/* start reviews */
+
+.reviews {
+    padding: 165px 0 95px;
+    background-image: linear-gradient(90deg, rgb(0,80,131), rgb(32,179,120));
+    position: relative;
+    &::after {
+        content: url(../images/content/kovichki.png);
+        position: absolute;
+        top: 90px;
+        right: 50%;
+        left: 50%;
+    }
+    &__slider {
+        &-content {
+            font-size: 16px;
+            line-height: 30px;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+        &-name {
+            font-size: 14px;
+            color: #fff;
+        }
+        &-prof {
+            margin-top: 10px;
+            @include f300;
+            font-size: 13px;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.reviews__slider-wrapper {
+    max-width: 810px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.reviews__slider-small {
+    max-width: 310px;
+    margin: 0 auto;
+    position: relative;
+    .slick-arrow {
+        border: none;
+        background: transparent;
+        outline: none;
+        font-size: 0;
+    }
+    .slick-arrow.slick-prev {
+        position: absolute;
+        top: 25px;
+        left: -60px;
+    }
+    .slick-arrow.slick-next {
+        position: absolute;
+        top: 25px;
+        right: -60px;
+    }
+}
+
+.reviews__slider-photo {
+    border-radius: 50%;
+    max-width: 46px;
+    min-height: 46px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s;
+}
+
+.slick-slide.slick-center {
+    .reviews__slider-photo {
+        min-width: 70px;
+        height: 70px;
+
+    }
+}
+
+.reviews__slider-small .slick-track {
+    display: flex;
+    align-items: center;
+    .slick-slide {
+        width: 70px !important;
+    }
+}
+
+.reviews__slider-small .slick-track div + div {
+    margin-left: 10px;
+}
+
+.slick-slide.slick-center {
+    .reviews__slider-photo {
+        max-width: 70px;
+        min-height: 70px;
+    }
+}
+  
+/* end reviews */
+
+/* start contact  */
+
+.contact {
+    padding: 120px 0;
+    background-color: #fff;
+    &__title {
+        font-size: 36px;
+        color: #413d4b;
+        text-align: center;
+        margin-bottom: 75px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contact__map {
+    &-title {
+        font-size: 18px;
+        color: #000;
+        margin-bottom: 40px;
+    }
+    &-address {
+        font-size: 14px;
+        margin-bottom: 15px;
+        color: #737373;
+    }
+    &-city {
+        font-size: 14px;
+        margin-bottom: 15px;
+        color: #737373;
+    }
+    &-index {
+        font-size: 14px;
+        margin-bottom: 15px;
+        color: #737373;
+    }
+}
+
+.contact__form {
+    padding-top: 15px;
+    padding-right: 100px;
+    input,
+    textarea {
+        border: 1px solid #e5e5e5;
+        display: block;
+        font-size: 14px;
+        color: #413d4b;
+    }
+    input {
+        height: 45px;
+        width: 500px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 25px;
+    }
+    textarea {
+        padding: 20px 20px;
+        width: 100%;
+        resize: none;
+        height: 200px;
+    }
+    input,
+    textarea::placeholder {
+        color: #413d4b;
+        font-size: 14px;
+    }
+}
+
+.contact__form-btn {
+    background-color: $green;
+    border: none;
+    cursor: pointer;
+    padding: 15px 25px;
+    margin-top: 25px;
+    color: #ffffff;
+    @include f700;
+}
+
+/* end contact */
+
+
+/* start footer */
+
+.footer {
+    padding: 130px 0 120px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 462px;
+    background-image: linear-gradient(-90deg, rgba(4,77,120, 0.9), rgba(4,77,120, 0.9)), url(../images/footer-bg.jpg);
+}
+
+
+
+
+/* end footer */
