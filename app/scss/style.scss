@@ -30,7 +30,6 @@
             margin-left: 30px;
         }
     }
-
     &-btn {
         margin-left: 60px;
         padding: 17px 27px;
@@ -38,6 +37,21 @@
         font-size: 16px;
         text-align: center;
     }
+}
+
+.header__menu-btn {
+    width: 30px;
+    display: none;
+}
+
+.header__menu-row {
+    width: 100%;
+    background-color: $green;
+    height: 5px;
+}
+
+.header__menu-row + .header__menu-row {
+    margin-top: 5px;
 }
 
 .header__inner-title {
@@ -70,7 +84,7 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        min-height: 378px;
+        height: 378px;
         max-width: 503px;
         position: relative;
     }
@@ -102,7 +116,6 @@
 .items {
     padding: 60px 0 45px;
     background-color: #fff;
-
     &__box {
         display: flex;
         justify-content: space-between;
@@ -154,17 +167,12 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        display: block;
     }
 }
 
 .project__slider .slick-slide {
     max-width: 388px;
 }
-
-.project__slider .slick-track div + div {
-    margin-left: 34px;
-} 
 
 .project__btn {
     margin-top: 60px;
@@ -252,7 +260,6 @@
     .reviews__slider-photo {
         min-width: 70px;
         height: 70px;
-
     }
 }
 
@@ -273,6 +280,10 @@
         max-width: 70px;
         min-height: 70px;
     }
+}
+
+.reviews__slider-small .slick-list {
+    padding: 0px 0px !important;
 }
   
 /* end reviews */
@@ -369,9 +380,55 @@
     background-repeat: no-repeat;
     min-height: 462px;
     background-image: linear-gradient(-90deg, rgba(4,77,120, 0.9), rgba(4,77,120, 0.9)), url(../images/footer-bg.jpg);
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
+.footer__column {
+    max-width: 470px;
+    width: 100%;
+    font-size: 14px;
+    color: #cad3dc;
+    &-title {
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    &-text {
+        margin-bottom: 35px;
+        line-height: 30px;
+    }
+    &-content {
+        line-height: 30px;
+    }
+    &-address,
+    &-city {
+        margin-bottom: 20px;
+    }
+    &-index {
+        margin-bottom: 40px;
+    }
+    &-phone {
+        display: block;
+        font-size: 14px;
+        color: #cad3dc;
+        margin-bottom: 20px;
+    }
+    &-email {
+        display: block;
+        font-size: 14px;
+        color: #cad3dc;
+    }
 
+}
 
+.footer__menu {
+    max-width: 270px;
+}
 
 /* end footer */
+
+
+@import 'media';
